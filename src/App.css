@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 40px;
+
+  background-image: url("./cdl2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: "Quicksand", sans-serif;
+  color: #1B4F91;
+}
+
+/* ================= APP ================= */
+
+.app {
+  max-width: 780px;
+  margin: auto;
+
+  padding: 45px;
+
+  background: #FAFAF7;
+
+  border: 2px solid #A9C6E0;
+
+  border-radius: 24px;
+
+  box-shadow: 0 20px 45px rgba(33, 59, 115, 0.25);
+}
+
+/* ================= TÍTULO ================= */
+
+h1 {
+  font-family: "Dancing Script", cursive;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  font-size: 78px;
+
+  color: #b81111;
+
+  text-shadow: 2px 2px 0 #213B73;
+
+  margin-top: 0;
+
+  margin-bottom: 30px;
+
+  line-height: 1.1;
+}
+
+h1 em {
+  color: #880606;
+
+  font-style: normal;
+}
+
+/* ================= SUBTÍTULOS ================= */
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #1B4F91;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h2::before {
+  content: "♥";
+  color: #9c1722;
+  font-size: 16px;
+}
+
+p {
+  margin: 8px 0;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+/* ================= INPUTS ================= */
+
+input,
+select {
+  width: 100%;
+
+  padding: 15px;
+
+  font-size: 17px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+
+  background: #ffffff;
+
+  border: 2px solid #A9C6E0;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+
+  border-color: #1B4F91;
+
+  box-shadow: 0 0 12px rgba(27, 79, 145, 0.3);
+}
+
+::placeholder {
+  color: #8a9aab;
+}
+
+/* ================= BOTÕES ================= */
+
+button {
+  background: #1B4F91;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 30px;
+
+  padding: 12px 24px;
+
+  cursor: pointer;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+
+  font-weight: 700;
+
+  transition: 0.25s;
+
+  margin-right: 8px;
+}
+
+button:hover {
+  background: #143c6e;
+
+  transform: translateY(-2px);
+}
+
+button.active {
+  background: #9c1722;
+  color: #ffffff;
+}
+
+/* Botão "Asc" em tom dourado/mostarda - adicione a classe "asc" nesse botão no JSX */
+button.asc {
+  background: #E0A526;
+  color: #ffffff;
+}
+
+button.asc:hover {
+  background: #c8901f;
+}
+
+/* ================= PESQUISA E FILTROS ================= */
+
+.search,
+.filter {
+  margin-bottom: 35px;
+
+  padding-bottom: 25px;
+
+  border-bottom: 2px solid rgba(156, 23, 34, 0.25);
+}
+
+.filter-options {
+  display: flex;
+
+  gap: 35px;
+
+  justify-content: space-between;
+}
+
+.filter-options div {
+  flex: 1;
+}
+
+/* ================= LISTA ================= */
+
+.todo-list {
+  margin: 35px 0;
+}
+
+/* ================= CARD ================= */
+
+.todo {
+  background: #ffffff;
+
+  border-left: 8px solid #A9C6E0;
+
+  border-radius: 16px;
+
+  padding: 22px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 6px 14px rgba(33, 59, 115, 0.08);
+
+  transition: 0.25s;
+}
+
+.todo:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 15px 28px rgba(33, 59, 115, 0.16);
+
+  border-left-color: #E0A526;
+}
+
+.todo p {
+  margin: 5px 0;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.todo div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.todo.categoria-trabalho { border-left-color: #1B4F91; }
+.todo.categoria-estudos  { border-left-color: #E0A526; }
+.todo.categoria-pessoal  { border-left-color: #9c1722; }
+
+.categoria-tag {
+  display: inline-block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: #1B4F91;
+  margin-left: 8px;
+}
+.categoria-tag.trabalho { background: #d3dcf0; }
+.categoria-tag.estudos  { background: #cfe3f5; }
+.categoria-tag.pessoal  { background: #f3d3e0; }
+
+/* ================= BOTÕES DA TAREFA ================= */
+
+.complete {
+  background: #E0A526;
+  color: #ffffff;
+}
+
+.complete:hover {
+  background: #c8901f;
+}
+
+.remove {
+  background: #9c1722;
+}
+
+.remove:hover {
+  background: #7a1119;
+  transform: scale(1.08);
+}
+
+/* ================= FORM ================= */
+
+.todo-form {
+  margin-top: 35px;
+
+  padding-top: 30px;
+
+  border-top: 2px solid rgba(156, 23, 34, 0.25);
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 760px) {
+  body {
+    padding: 20px;
+    background-attachment: scroll;
+  }
+
+  .app {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .todo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .todo div {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* ================= TAREFA CONCLUÍDA (opcional) ================= */
+.todo.done {
+  opacity: 0.6;
+}
+
+.todo.done p {
+  text-decoration: line-through;
+  text-decoration-color: #E0A526;
+  text-decoration-thickness: 2px;
+}
+
+/* ================= SCROLLBAR CUSTOMIZADA ================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F4F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A9C6E0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1B4F91;
+}
+
+/* ================= BOTÃO CRIAR TAREFA COM DESTAQUE ================= */
+.todo-form button[type="submit"],
+.todo-form button.criar {
+  background: #E0A526;
+  color: #ffffff;
+  padding: 13px 28px;
+  font-size: 16px;
+}
+
+.todo-form button[type="submit"]:hover,
+.todo-form button.criar:hover {
+  background: #c8901f;
+}
