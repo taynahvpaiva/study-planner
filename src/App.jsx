@@ -4,6 +4,7 @@ import Todo from "./components/Todo";
 import Todoform from "./components/Todoform";
 import Search from "./components/Search";
 import Filter from "./components/Filter";
+import Pomodoro from "./components/pomodoro";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -106,10 +107,17 @@ function App() {
               completeTodo={completeTodo}
             />
           ))}
+
       </div>
 
       <Todoform addTodo={addTodo} />
+
+      <div ClassName="pomodoro-section">
+        <Pomodoro />
+      </div>
+
     </div>
+
   );
 }
 
