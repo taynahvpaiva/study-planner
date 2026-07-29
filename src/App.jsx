@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Todo from "./components/Todo";
 import Todoform from "./components/Todoform";
-import Search from "./components/Search";
+import Search from "./components/search";
 import Filter from "./components/Filter";
 import Pomodoro from "./components/pomodoro";
 
@@ -32,7 +32,7 @@ function App() {
   const [filter, setFilter] = useState("All");
   const [sort, setSort] = useState("Asc");
 
-  // Adicionar tarefa
+
   const addTodo = (text, category) => {
     const newTodos = [
       ...todos,
@@ -47,13 +47,13 @@ function App() {
     setTodos(newTodos);
   };
 
-  // Remover tarefa
+
   const removeTodo = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
     setTodos(filteredTodos);
   };
 
-  // Completar tarefa
+ 
   const completeTodo = (id) => {
     const newTodos = [...todos];
 
